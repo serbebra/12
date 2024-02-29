@@ -1,0 +1,23 @@
+import Array from "mo:base/Array";
+
+// Defining a function to add two numbers
+func add(x: Nat, y: Nat): Nat {
+  return x + y;
+};
+
+// Defining a data type for a list of numbers
+type Numbers = Array<Nat>;
+
+// Function to compute the sum of all numbers in the list
+func sum(numbers: Numbers): Nat {
+  var total = 0;
+  for (num in numbers) {
+    total := total + num;
+  };
+  return total;
+};
+
+// Example of using the functions
+let result1 = add(5, 3); // Result: 8
+let numbers: Numbers = [1, 2, 3, 4, 5];
+let result2 = sum(numbers); // Result: 15
